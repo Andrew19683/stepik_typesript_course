@@ -85,7 +85,7 @@ console.log("");
 Допишите функцию, которая возвращает разные типы в зависимости от флага
 */
 console.log(`===== ЗАДАНИЕ ${taskNumber++} =====`);
-function getData(asString: boolean): string | object {
+function getData(asString: boolean): string | { id: number, name: string, age: number} {
   const data = { id: 1, name: "Анна", age: 25 };
 
   if (asString) {
@@ -166,7 +166,7 @@ console.log("");
 Допишите функцию, которая логирует сообщение с опциональным уровнем
 */
 console.log(`===== ЗАДАНИЕ ${taskNumber++} =====`);
-function logMessage(message: string, level?: string): void {
+function logMessage(message: string, level?: 'ERROR' | 'WARN'): void {
   const timestamp = new Date().toISOString();
 
   if (level) {
